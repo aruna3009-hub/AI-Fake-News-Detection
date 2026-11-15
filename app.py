@@ -92,26 +92,29 @@ h1, h2, h3 {
     border: 1px solid #168C8C;
     margin-bottom: 15px;
 }
-
 /* Success and warning messages */
-.stAlert[data-testid="stAlert"] {
+div[data-testid="stAlert"] {
     border-radius: 10px;
 }
 
 div[data-testid="stAlert"][kind="warning"] {
     border-left: 5px solid #D99127;
 }
+
+div[data-testid="stAlert"][kind="success"] {
+    border-left: 5px solid #168C8C;
+}
+
 /* Progress bar */
 .stProgress > div > div > div > div {
     background-color: #168C8C;
 }
-
 /* Metrics */
 [data-testid="stMetric"] {
     background-color: white;
     padding: 15px;
     border-radius: 10px;
-    border-left: 4px solid #2463A6;
+    border-left: 4px solid #D99127;
 }
 
 /* Footer */
