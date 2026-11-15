@@ -12,44 +12,119 @@ st.set_page_config(
 
 st.markdown("""
 <style>
+
+/* Main background */
 .stApp {
-    background-color: #f4f7fc;
+    background-color: #E8EDF5;
+    color: #142B4A;
 }
+
+/* Main content */
 .block-container {
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
+
+/* Main title */
 .main-title {
     text-align: center;
-    color: #173b68;
+    color: #142B4A;
     font-size: 38px;
     font-weight: bold;
 }
+
+/* Subtitle */
 .subtitle {
     text-align: center;
-    color: #52677f;
+    color: #168C8C;
     font-size: 17px;
 }
-.section-title {
-    color: #173b68;
+
+/* Section headings */
+h1, h2, h3 {
+    color: #142B4A !important;
+}
+
+/* Navigation */
+.stRadio > div {
+    background-color: white;
+    border: 1px solid #2463A6;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Text area */
+.stTextArea textarea {
+    background-color: white !important;
+    color: #142B4A !important;
+    border: 1px solid #2463A6 !important;
+    border-radius: 10px !important;
+}
+
+/* Dropdown */
+.stSelectbox div[data-baseweb="select"] > div {
+    background-color: white;
+    border-color: #168C8C;
+    color: #142B4A;
+    border-radius: 8px;
+}
+
+/* Buttons */
+.stButton > button {
+    background-color: #2463A6;
+    color: white;
+    border: none;
+    border-radius: 10px;
     font-weight: bold;
 }
+
+.stButton > button:hover {
+    background-color: #168C8C;
+    color: white;
+    border: none;
+}
+
+/* Information cards */
 .info-card {
     background-color: white;
     padding: 22px;
     border-radius: 12px;
-    border: 1px solid #dce5f0;
+    border: 1px solid #168C8C;
     margin-bottom: 15px;
 }
+
+/* Success and warning messages */
+.stAlert[data-testid="stAlert"] {
+    border-radius: 10px;
+}
+
+div[data-testid="stAlert"][kind="warning"] {
+    border-left: 5px solid #D99127;
+}
+/* Progress bar */
+.stProgress > div > div > div > div {
+    background-color: #168C8C;
+}
+
+/* Metrics */
+[data-testid="stMetric"] {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #2463A6;
+}
+
+/* Footer */
 .footer {
     text-align: center;
-    color: #718096;
+    color: #142B4A;
     font-size: 13px;
     margin-top: 35px;
 }
+
 </style>
 """, unsafe_allow_html=True)
-
+   
 model_path = "models/fake_news_model.pkl"
 
 if not os.path.exists(model_path):
@@ -222,7 +297,7 @@ elif menu == "About Project":
 
     st.markdown("### Model Performance")
 
-    st.metric("Test Accuracy", "61.4%")
+    st.metric("Test Accuracy", "61.33%")
 
     st.markdown("### Limitations")
 
